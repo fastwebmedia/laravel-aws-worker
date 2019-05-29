@@ -117,6 +117,10 @@ Or add it to `composer.json` manually:
 }
 ```
 
+Then publish the package in order to create the config file.
+
+`php artisan vendor:publish --provider="Dusterio\AwsWorker\Integrations\LaravelServiceProvider"`
+
 ### Usage in Laravel 5
 
 ```php
