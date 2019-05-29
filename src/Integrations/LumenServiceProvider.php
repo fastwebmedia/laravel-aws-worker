@@ -1,8 +1,8 @@
 <?php
 
-namespace Dusterio\AwsWorker\Integrations;
+namespace Fastwebmedia\AwsWorker\Integrations;
 
-use Dusterio\PlainSqs\Sqs\Connector;
+use Fastwebmedia\PlainSqs\Sqs\Connector;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Queue\Events\JobProcessed;
@@ -35,8 +35,8 @@ class LumenServiceProvider extends ServiceProvider
      */
     protected function addRoutes($router)
     {
-        $router->post('/worker/schedule', 'Dusterio\AwsWorker\Controllers\WorkerController@schedule');
-        $router->post('/worker/queue', 'Dusterio\AwsWorker\Controllers\WorkerController@queue');
+        $router->post('/worker/schedule', 'Fastwebmedia\AwsWorker\Controllers\WorkerController@schedule');
+        $router->post('/worker/queue', 'Fastwebmedia\AwsWorker\Controllers\WorkerController@queue');
     }
 
     /**

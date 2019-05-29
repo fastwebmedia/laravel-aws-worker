@@ -1,12 +1,12 @@
 <?php
 
-namespace Dusterio\AwsWorker\Wrappers;
+namespace Fastwebmedia\AwsWorker\Wrappers;
 
 use Illuminate\Queue\Worker;
 
 /**
  * Class DefaultWorker
- * @package Dusterio\AwsWorker\Wrappers
+ * @package Fastwebmedia\AwsWorker\Wrappers
  */
 class DefaultWorker implements WorkerInterface
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\AwsWorker\Integrations;
+namespace Fastwebmedia\AwsWorker\Integrations;
 
 /**
  * Trait RegistersConfig
- * @package Dusterio\AwsWorker\Integrations
+ * @package Fastwebmedia\AwsWorker\Integrations
  */
 trait RegistersConfig
 {

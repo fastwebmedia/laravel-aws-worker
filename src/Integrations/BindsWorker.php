@@ -1,14 +1,14 @@
 <?php
 
-namespace Dusterio\AwsWorker\Integrations;
+namespace Fastwebmedia\AwsWorker\Integrations;
 
-use Dusterio\AwsWorker\Wrappers\WorkerInterface;
-use Dusterio\AwsWorker\Wrappers\DefaultWorker;
-use Dusterio\AwsWorker\Wrappers\Laravel53Worker;
+use Fastwebmedia\AwsWorker\Wrappers\WorkerInterface;
+use Fastwebmedia\AwsWorker\Wrappers\DefaultWorker;
+use Fastwebmedia\AwsWorker\Wrappers\Laravel53Worker;
 
 /**
  * Class BindsWorker
- * @package Dusterio\AwsWorker\Integrations
+ * @package Fastwebmedia\AwsWorker\Integrations
  */
 trait BindsWorker
 {

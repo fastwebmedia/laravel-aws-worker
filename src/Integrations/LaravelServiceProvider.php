@@ -1,11 +1,11 @@
 <?php
 
-namespace Dusterio\AwsWorker\Integrations;
+namespace Fastwebmedia\AwsWorker\Integrations;
 
-use Dusterio\AwsWorker\Wrappers\DefaultWorker;
-use Dusterio\AwsWorker\Wrappers\Laravel53Worker;
-use Dusterio\AwsWorker\Wrappers\WorkerInterface;
-use Dusterio\PlainSqs\Sqs\Connector;
+use Fastwebmedia\AwsWorker\Wrappers\DefaultWorker;
+use Fastwebmedia\AwsWorker\Wrappers\Laravel53Worker;
+use Fastwebmedia\AwsWorker\Wrappers\WorkerInterface;
+use Fastwebmedia\PlainSqs\Sqs\Connector;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Queue\Events\JobProcessed;
@@ -37,8 +37,8 @@ class LaravelServiceProvider extends ServiceProvider
      */
     protected function addRoutes()
     {
-        $this->app['router']->post('/worker/schedule', 'Dusterio\AwsWorker\Controllers\WorkerController@schedule');
-        $this->app['router']->post('/worker/queue', 'Dusterio\AwsWorker\Controllers\WorkerController@queue');
+        $this->app['router']->post('/worker/schedule', 'Fastwebmedia\AwsWorker\Controllers\WorkerController@schedule');
+        $this->app['router']->post('/worker/queue', 'Fastwebmedia\AwsWorker\Controllers\WorkerController@queue');
     }
 
     /**

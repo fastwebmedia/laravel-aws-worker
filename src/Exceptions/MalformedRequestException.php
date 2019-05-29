@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\AwsWorker\Exceptions;
+namespace Fastwebmedia\AwsWorker\Exceptions;
 
 /**
  * Class MalformedRequestException
- * @package Dusterio\AwsWorker\Exceptions
+ * @package Fastwebmedia\AwsWorker\Exceptions
  */
 class MalformedRequestException extends \Exception
 {

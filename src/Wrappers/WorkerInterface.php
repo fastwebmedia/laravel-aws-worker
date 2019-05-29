@@ -1,10 +1,10 @@
 <?php
 
-namespace Dusterio\AwsWorker\Wrappers;
+namespace Fastwebmedia\AwsWorker\Wrappers;
 
 /**
  * Interface WorkerInterface
- * @package Dusterio\AwsWorker\Wrappers
+ * @package Fastwebmedia\AwsWorker\Wrappers
  */
 interface WorkerInterface
 {

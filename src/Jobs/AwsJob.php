@@ -1,6 +1,6 @@
 <?php
 
-namespace Dusterio\AwsWorker\Jobs;
+namespace Fastwebmedia\AwsWorker\Jobs;
 
 use Illuminate\Queue\Jobs\Job;
 use Illuminate\Container\Container;

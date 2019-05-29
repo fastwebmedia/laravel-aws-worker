@@ -1,13 +1,13 @@
 <?php
 
-namespace Dusterio\AwsWorker\Wrappers;
+namespace Fastwebmedia\AwsWorker\Wrappers;
 
 use Illuminate\Queue\Worker;
 use Illuminate\Queue\WorkerOptions;
 
 /**
  * Class Laravel53Worker
- * @package Dusterio\AwsWorker\Wrappers
+ * @package Fastwebmedia\AwsWorker\Wrappers
  */
 class Laravel53Worker implements WorkerInterface
 {

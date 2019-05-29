@@ -1,9 +1,17 @@
 {
-    "name": "dusterio/laravel-aws-worker",
+    "name": "fastwebmedia/laravel-aws-worker",
     "type": "library",
     "description": "Run Laravel (or Lumen) tasks and queue listeners inside of AWS Elastic Beanstalk workers",
-    "keywords": ["php","laravel","lumen","sqs","aws","elasticbeanstalk","worker"],
-    "homepage": "https://github.com/dusterio/laravel-aws-worker",
+    "keywords": [
+        "php",
+        "laravel",
+        "lumen",
+        "sqs",
+        "aws",
+        "elasticbeanstalk",
+        "worker"
+    ],
+    "homepage": "https://github.com/fastwebmedia/laravel-aws-worker",
     "license": "MIT",
     "authors": [
         {
@@ -15,9 +23,9 @@
     "require": {
         "php": ">=5.5.0",
         "illuminate/support": "5.*",
-	    "illuminate/queue": "5.*",
-	    "illuminate/bus": "5.*",
-	    "aws/aws-sdk-php": "~3.0",
+        "illuminate/queue": "5.*",
+        "illuminate/bus": "5.*",
+        "aws/aws-sdk-php": "~3.0",
         "illuminate/http": "5.*"
     },
     "require-dev": {
@@ -26,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dusterio\\AwsWorker\\": "src/"
+            "Fastwebmedia\\AwsWorker\\": "src/"
         }
     }
 }

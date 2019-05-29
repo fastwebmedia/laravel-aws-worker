@@ -1,10 +1,10 @@
 # laravel-aws-worker
-[![Build Status](https://travis-ci.org/dusterio/laravel-aws-worker.svg)](https://travis-ci.org/dusterio/laravel-aws-worker)
-[![Code Climate](https://codeclimate.com/github/dusterio/laravel-aws-worker/badges/gpa.svg)](https://codeclimate.com/github/dusterio/laravel-aws-worker/badges)
-[![Total Downloads](https://poser.pugx.org/dusterio/laravel-aws-worker/d/total.svg)](https://packagist.org/packages/dusterio/laravel-aws-worker)
-[![Latest Stable Version](https://poser.pugx.org/dusterio/laravel-aws-worker/v/stable.svg)](https://packagist.org/packages/dusterio/laravel-aws-worker)
-[![Latest Unstable Version](https://poser.pugx.org/dusterio/laravel-aws-worker/v/unstable.svg)](https://packagist.org/packages/dusterio/laravel-aws-worker)
-[![License](https://poser.pugx.org/dusterio/laravel-aws-worker/license.svg)](https://packagist.org/packages/dusterio/laravel-plain-sqs)
+[![Build Status](https://travis-ci.org/Fastwebmedia/laravel-aws-worker.svg)](https://travis-ci.org/Fastwebmedia/laravel-aws-worker)
+[![Code Climate](https://codeclimate.com/github/Fastwebmedia/laravel-aws-worker/badges/gpa.svg)](https://codeclimate.com/github/Fastwebmedia/laravel-aws-worker/badges)
+[![Total Downloads](https://poser.pugx.org/Fastwebmedia/laravel-aws-worker/d/total.svg)](https://packagist.org/packages/Fastwebmedia/laravel-aws-worker)
+[![Latest Stable Version](https://poser.pugx.org/Fastwebmedia/laravel-aws-worker/v/stable.svg)](https://packagist.org/packages/Fastwebmedia/laravel-aws-worker)
+[![Latest Unstable Version](https://poser.pugx.org/Fastwebmedia/laravel-aws-worker/v/unstable.svg)](https://packagist.org/packages/Fastwebmedia/laravel-aws-worker)
+[![License](https://poser.pugx.org/Fastwebmedia/laravel-aws-worker/license.svg)](https://packagist.org/packages/Fastwebmedia/laravel-plain-sqs)
 
 Run Laravel (or Lumen) tasks and queue listeners inside of AWS Elastic Beanstalk workers
 
@@ -62,7 +62,7 @@ Therefore, we will create jobs manually based on SQS payload that arrived, and p
 our controller will return a 200 HTTP status and AWS daemon will delete the job from the queue. Again, we don't need to poll for jobs and we don't need to delete jobs - that's done by AWS in this case.
 
 If you dispatch jobs from another instance of Laravel or if you are following Laravel's payload format ```{"job":"","data":""}``` you should be okay to go. If you want to receive custom format JSON messages, you may want to install 
-[Laravel plain SQS](https://github.com/dusterio/laravel-plain-sqs) package as well.
+[Laravel plain SQS](https://github.com/Fastwebmedia/laravel-plain-sqs) package as well.
 
 ## Configuring the queue
 
@@ -104,7 +104,7 @@ To generate key and secret go to Identity and Access Management in the AWS conso
 To install simply run:
 
 ```
-composer require dusterio/laravel-aws-worker
+composer require Fastwebmedia/laravel-aws-worker
 ```
 
 Or add it to `composer.json` manually:
@@ -112,14 +112,14 @@ Or add it to `composer.json` manually:
 ```json
 {
     "require": {
-        "dusterio/laravel-aws-worker": "~0.1"
+        "Fastwebmedia/laravel-aws-worker": "~0.1"
     }
 }
 ```
 
 Then publish the package in order to create the config file.
 
-`php artisan vendor:publish --provider="Dusterio\AwsWorker\Integrations\LaravelServiceProvider"`
+`php artisan vendor:publish --provider="Fastwebmedia\AwsWorker\Integrations\LaravelServiceProvider"`
 
 ### Usage in Laravel 5
 
@@ -128,7 +128,7 @@ Then publish the package in order to create the config file.
 
 'providers' => [
     '...',
-    'Dusterio\AwsWorker\Integrations\LaravelServiceProvider',
+    'Fastwebmedia\AwsWorker\Integrations\LaravelServiceProvider',
 ];
 ```
 
@@ -139,8 +139,8 @@ $ php artisan route:list
 +--------+----------+-----------------+------+----------------------------------------------------------+------------+
 | Domain | Method   | URI             | Name | Action                                                   | Middleware |
 +--------+----------+-----------------+------+----------------------------------------------------------+------------+
-|        | POST     | worker/queue    |      | Dusterio\AwsWorker\Controllers\WorkerController@queue    |            |
-|        | POST     | worker/schedule |      | Dusterio\AwsWorker\Controllers\WorkerController@schedule |            |
+|        | POST     | worker/queue    |      | Fastwebmedia\AwsWorker\Controllers\WorkerController@queue    |            |
+|        | POST     | worker/schedule |      | Fastwebmedia\AwsWorker\Controllers\WorkerController@schedule |            |
 +--------+----------+-----------------+------+----------------------------------------------------------+------------+
 ```
 
@@ -155,7 +155,7 @@ So that's it - if you (or AWS) hits ```/worker/queue```, Laravel will process on
 
 ```php
 // Add in your bootstrap/app.php
-$app->register(Dusterio\AwsWorker\Integrations\LumenServiceProvider::class);
+$app->register(Fastwebmedia\AwsWorker\Integrations\LumenServiceProvider::class);
 ```
 
 ## Errors and exceptions
